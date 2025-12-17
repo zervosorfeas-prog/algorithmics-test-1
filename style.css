@@ -1,0 +1,135 @@
+margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #6b3fa0 0%, #8e5fc7 50%, #a67dd8 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.quote-box {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.quote-box:hover {
+  transform: translateY(-5px);
+}
+
+.quote-content {
+  margin-bottom: 30px;
+}
+
+#quote-text {
+  font-size: 1.4rem;
+  color: #333;
+  line-height: 1.6;
+  font-weight: 300;
+  font-style: italic;
+  position: relative;
+  padding: 0 20px;
+}
+
+#quote-text::before {
+  content: '"';
+  font-size: 4rem;
+  color: #6b3fa0;
+  position: absolute;
+  left: -10px;
+  top: -20px;
+  font-family: Georgia, serif;
+  opacity: 0.3;
+}
+
+#quote-author {
+  font-size: 1.1rem;
+  color: #6b3fa0;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+#new-quote-btn {
+  background: linear-gradient(135deg, #6b3fa0 0%, #8e5fc7 100%);
+  color: #ffffff;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 5px 15px rgba(107, 63, 160, 0.4);
+}
+
+#new-quote-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(107, 63, 160, 0.5);
+}
+
+#new-quote-btn:active {
+  transform: scale(0.98);
+}
+
+#new-quote-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .quote-box {
+    padding: 25px;
+  }
+
+  #quote-text {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+
+  #quote-text::before {
+    font-size: 3rem;
+    left: -5px;
+    top: -15px;
+  }
+
+  #quote-author {
+    font-size: 1rem;
+  }
+
+  #new-quote-btn {
+    padding: 12px 30px;
+    font-size: 0.9rem;
+  }
+}
